@@ -24,6 +24,6 @@ HTML, CSS , JS, JSON, Google Fonts, GIT
 email :: antony.wambugu@student.moringaschool.com
 
 ### License
-*LIcenced under the [MT-licence](https://github.com/k-koech/portfolio-sdft11/blob/master/LICENSE.md)*
+*LIcenced under the [MT-licence](https://github.com/antony-kimanzi/fitness-progress-app/blob/main/LICENSE.md)*
 
 Copyright (c) 2024 **Antony Wambugu**
