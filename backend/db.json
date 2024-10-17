@@ -1,0 +1,64 @@
+{
+  "workoutData": [
+    {
+      "id": "4570",
+      "exercise": "Squat",
+      "duration": "40",
+      "howTo": "Stand with your feet shoulder-width apart, lower your hips as if sitting back into a chair, then return to standing.",
+      "reps": "10",
+      "sets": "2"
+    },
+    {
+      "id": "d5f3",
+      "exercise": "Push ups",
+      "duration": "25",
+      "howTo": "Begin with your chest and stomach flat in the floor. Your legs should be straight out behind you and your palms should be at chest level with the arms bent out at a 45-degree angle.",
+      "reps": "20",
+      "sets": "3"
+    },
+    {
+      "id": "a87c",
+      "exercise": "Bench press",
+      "duration": "20",
+      "howTo": "Lie on a bench with feet flat on the floor, grip the barbell, lower it to your chest, then push it back up.",
+      "reps": "10",
+      "sets": "3"
+    },
+    {
+      "id": "fb0d",
+      "exercise": "crunches",
+      "duration": "20",
+      "howTo": "Begin with you lying down, one knee bent, and hands positioned beneath your lower back for support. \"Do not hollow your stomach or press your back against the floor\", McGill says. Gently lift your head and shoulders, hold briefly and relax back down.",
+      "reps": "10",
+      "sets": "3"
+    },
+    {
+      "id": "11d7",
+      "exercise": "lunges",
+      "duration": "35",
+      "howTo": "Start in a standing position with your feet hip-width apart. Step forward longer than a walking stride so one leg is ahead of your torso and the other is behind. Your foot should land flat and remain flat while it’s on the ground. Your rear heel will rise off of the ground. Bend your knees to approximately 90 degrees as you lower yourself. Remember to keep your trunk upright and core engaged. Then, forcefully push off from your front leg to return to the starting position.",
+      "reps": "12",
+      "sets": "3"
+    }
+  ],
+  "bodyMeasurements": [
+    {
+      "id": "1",
+      "weight_kg": 81,
+      "height_cm": 180,
+      "muscle_mass": 75,
+      "image": "/images/body-stats.png"
+    }
+  ],
+  "fitnessGoals": [
+    {
+      "id": "1",
+      "goal_type": "Weight Loss",
+      "target": "Lose 10 pounds",
+      "start_date": "2023-09-01",
+      "end_date": "2023-11-01",
+      "image": "/images/progress.png",
+      "progress": 25
+    }
+  ]
+}
