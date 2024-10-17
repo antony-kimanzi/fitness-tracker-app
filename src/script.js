@@ -78,7 +78,7 @@ function addWorkoutEntry(workout) {
 
 // Open Modal for Viewing Workout Details
 function openViewModal(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`)
+  fetch(`https://phase-1-project-fitness-progress-app.onrender.com/workoutData/${id}`)
     .then((res) => res.json())
     .then((workout) => {
       const modalTitle = document.getElementById("viewModalLabel");
@@ -143,17 +143,15 @@ document.getElementById("workout-form").addEventListener("submit", function (e) 
   const workoutData = { exercise, duration, howTo, reps, sets };
 
   if (isUpdating && currentWorkoutId !== null) {
-    // If updating, send PATCH request
     updateWorkout(currentWorkoutId, workoutData);
   } else {
-    // If adding new workout, send POST request
     addNewWorkout(workoutData);
   }
 });
 
 // Add a new workout function
 function addNewWorkout(workoutData) {
-  fetch("http://localhost:3000/workoutData", {
+  fetch("https://phase-1-project-fitness-progress-app.onrender.com/workoutData", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -171,7 +169,7 @@ function addNewWorkout(workoutData) {
 
 // Update workout function
 function updateWorkout(id, workoutData) {
-  fetch(`http://localhost:3000/workoutData/${id}`, {
+  fetch(`https://phase-1-project-fitness-progress-app.onrender.com/workoutData/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -196,7 +194,7 @@ function updateWorkout(id, workoutData) {
 
 // Delete Workout Function
 function deleteWorkout(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`, {
+  fetch(`https://phase-1-project-fitness-progress-app.onrender.com/workoutData/${id}`, {
     method: "DELETE",
   })
     .then(() => {
@@ -206,7 +204,7 @@ function deleteWorkout(id) {
 
 // Open the modal for updating workout
 function openUpdateModal(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`)
+  fetch(`https://phase-1-project-fitness-progress-app.onrender.com/workoutData/${id}`)
     .then((res) => res.json())
     .then((workout) => openModal(true, workout))
     .catch((error) => console.error("Error fetching workout:", error));
@@ -214,7 +212,7 @@ function openUpdateModal(id) {
 
 // Fetch workout data and populate the workout log
 function fetchWorkoutData() {
-  fetch("http://localhost:3000/workoutData")
+  fetch("https://phase-1-project-fitness-progress-app.onrender.com/workoutData")
     .then((res) => res.json())
     .then((workouts) => workouts.forEach(addWorkoutEntry));
 }
@@ -222,13 +220,12 @@ function fetchWorkoutData() {
 // Fetch data on page load
 fetchWorkoutData();
 
-// Fetch and display body measurements and fitness goals on page load
 function fetchData() {
-    fetch("http://localhost:3000/bodyMeasurements")
+    fetch("https://phase-1-project-fitness-progress-app.onrender.com/bodyMeasurements")
       .then((res) => res.json())
       .then(displayBodyMeasurements);
   
-    fetch("http://localhost:3000/fitnessGoals")
+    fetch("https://phase-1-project-fitness-progress-app.onrender.com/fitnessGoals")
       .then((res) => res.json())
       .then(displayFitnessGoals);
   }
@@ -240,9 +237,9 @@ function fetchData() {
   
     bodyStatsContainer.innerHTML = `
         <img src="${stats.image}" alt="body stats image" class="progress-image" />
-      <p>Weight: ${stats.weight_kg} kg</p>
-      <p>Height: ${stats.height_cm} cm</p>
-      <p>Muscle Mass: ${stats.muscle_mass}%</p>
+      <p><strong>Weight:</strong> ${stats.weight_kg} kg</p>
+      <p><strong>Height:</strong> ${stats.height_cm} cm</p>
+      <p><strong>Muscle Mass:</strong> ${stats.muscle_mass}%</p>
     `;
   
     // Pre-fill modal with existing data
@@ -258,9 +255,9 @@ function fetchData() {
   
     goalContainer.innerHTML = `
     <img src="${goal.image}" alt="fitness goal image" class="progress-image" />
-      <p>Goal Type: ${goal.goal_type}</p>
-      <p>Target: ${goal.target}</p>
-      <p>Progress: ${goal.progress}%</p>
+      <p><strong>Goal Type:</strong> ${goal.goal_type}</p>
+      <p><strong>Target:</strong> ${goal.target}</p>
+      <p><strong>Progress:</strong> ${goal.progress}%</p>
     `;
   
     // Pre-fill modal with existing data
@@ -283,7 +280,7 @@ function fetchData() {
       muscle_mass: muscleMass
     };
   
-    fetch(`http://localhost:3000/bodyMeasurements/1`, { // Assuming id=1 for simplicity
+    fetch(`https://phase-1-project-fitness-progress-app.onrender.com/bodyMeasurements/1`, { // Assuming id=1 for simplicity
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -292,7 +289,7 @@ function fetchData() {
     })
       .then((res) => res.json())
       .then(() => {
-        displayBodyMeasurements([updatedData]); // Update UI with new data
+        displayBodyMeasurements([updatedData]);
         const modal = bootstrap.Modal.getInstance(document.getElementById("bodyMeasurementsModal"));
         modal.hide();
       });
@@ -312,7 +309,7 @@ function fetchData() {
       progress: progress
     };
   
-    fetch(`http://localhost:3000/fitnessGoals/1`, { // Assuming id=1 for simplicity
+    fetch(`https://phase-1-project-fitness-progress-app.onrender.com/fitnessGoals/1`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

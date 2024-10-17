@@ -52,7 +52,6 @@ body {
   width: 50px;
 }
 
-/* Container for the sections */
 .custom-container {
   width: 90%;
   margin: 0 auto;
@@ -64,21 +63,21 @@ body {
 .card {
   flex: 1;
   margin-bottom: 20px;
-  max-width: 500px; /* Consistent width */
-  height: 100%; /* Ensure equal height */
-  min-height: 300px; /* Minimum height */
+  max-width: 500px;
+  height: 100%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lift effect */
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
   
@@ -100,7 +99,6 @@ p {
   font-size: 1.15rem;
 }
 
-/* Styling for modal buttons */
 button {
   width: 60%;
   margin: 10px auto;
@@ -119,7 +117,6 @@ button {
   margin: auto;
 }
 
-/* Styling for progress container */
 .progress-container {
   margin: 100px auto;
   display: flex;
@@ -127,12 +124,10 @@ button {
   gap: 20px;
 }
 
-/* Ensuring consistent image size */
 .progress-image {
   width: 200px;
 }
 
-/* Styling for workout, body measurements, and fitness goals */
 #body-stats,
 #fitness-goals {
   display: flex;
@@ -144,7 +139,6 @@ button {
   height: 100%;
 }
 
-/* Add line above headings */
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -162,7 +156,6 @@ h3::before {
   background-color: #6cc8f3;
 }
 
-/* Adjust spacing and layout */
 img.progress-image {
   margin-bottom: 20px;
 }
@@ -189,7 +182,7 @@ h2 {
 }
 
 .deleteBtn:hover {
-    background-color: #dc3545; /* Red on hover */
+    background-color: #dc3545;
     color: white;
     border-color: #dc3545;
   }
