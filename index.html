@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Progress</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="montserrat-style">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="pacifico-regular">
+        Fitness Tracker<img src="images/logo.png" alt="logo icon" />
+      </h1>
+    </div>
+
+    <div class="main-content">
+      <!-- Main Container with Add Workout Session Button -->
+      <div class="session">
+        <h3 class="pt-serif-bold-italic">Add Workout Session</h3>
+        <p>
+          Track your workout sessions, including exercise type, duration, reps,
+          and sets.
+        </p>
+        <button
+          id="modal-1"
+          type="button"
+          class="btn btn-primary w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal1"
+        >
+          Add Workout Session
+        </button>
+      </div>
+
+      <!-- Workout Session Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel1">
+                Workout Session
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="workout-form">
+                <div class="mb-3">
+                  <label for="exerciseInput" class="form-label"
+                    >Enter workout name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exerciseInput"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="howtoInput" class="form-label"
+                    >How to do the exercise</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="howtoInput"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="durationInput" class="form-label"
+                    >Duration (min)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="durationInput"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="repsInput" class="form-label">Repetitions</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="repsInput"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="setsInput" class="form-label">Sets</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="setsInput"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workout Log Section -->
+      <h3 class="logs pt-serif-bold-italic">Workout Logs</h3>
+      <p class="logs">
+        Keep track of your workout sessions including exercises, repetitions,
+        sets, and durations. This section helps you monitor your progress over
+        time.
+      </p>
+      <div id="workout-log" class="row row-cols-1 row-cols-md-3 g-4"></div>
+
+      <!-- Progress Section -->
+      <div class="progress-container">
+        <!-- Body Measurements Section -->
+        <div class="progress-body-container">
+          <h3 class="pt-serif-bold-italic">Body Measurements</h3>
+          <p>
+            Track your body measurements such as weight, height, and muscle mass
+            to assess your fitness progress.
+          </p>
+          <div class="container custom-container my-5">
+            <div class="row g-3">
+              <div class="col-md-12">
+                <div class="card p-3">
+                  <h3>Body Stats</h3>
+                  <p>
+                    Track your body measurements such as weight, height, and
+                    muscle mass to assess your fitness progress.
+                  </p>
+                  <div id="body-stats"></div>
+                  <button id="editBodyMeasurementsBtn" class="btn btn-primary">
+                    Update Body Measurements
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fitness Goals Section -->
+        <div class="progress-goal-container">
+          <h3 class="pt-serif-bold-italic">Fitness Goal</h3>
+          <p>
+            Track your body measurements such as weight, height, and muscle mass
+            to assess your fitness progress.
+          </p>
+          <div class="container custom-container my-5">
+            <div class="row g-3">
+              <div class="col-md-12">
+                <div class="card p-3">
+                  <h3>Fitness Goal</h3>
+                  <p>
+                    Set your fitness goals and track your progress toward
+                    achieving them. Stay motivated and monitor how close you are
+                    to your target.
+                  </p>
+                  <div id="fitness-goals"></div>
+                  <button id="editFitnessGoalsBtn" class="btn btn-primary">
+                    Update Fitness Goals
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Body Measurements Modal -->
+        <div
+          class="modal fade"
+          id="bodyMeasurementsModal"
+          tabindex="-1"
+          aria-labelledby="bodyMeasurementsModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="bodyMeasurementsModalLabel">
+                  Update Body Measurements
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="body-measurements-form">
+                  <div class="mb-3">
+                    <label for="weightInput" class="form-label"
+                      >Weight (kg)</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="weightInput"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="heightInput" class="form-label"
+                      >Height (cm)</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="heightInput"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="muscleMassInput" class="form-label"
+                      >Muscle Mass (%)</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="muscleMassInput"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fitness Goals Modal -->
+        <div
+          class="modal fade"
+          id="fitnessGoalsModal"
+          tabindex="-1"
+          aria-labelledby="fitnessGoalsModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="fitnessGoalsModalLabel">
+                  Update Fitness Goals
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="fitness-goals-form">
+                  <div class="mb-3">
+                    <label for="goalTypeInput" class="form-label"
+                      >Goal Type</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="goalTypeInput"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="targetInput" class="form-label">Target</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="targetInput"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="progressInput" class="form-label"
+                      >Progress (%)</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="progressInput"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Workout Modal -->
+    <div
+      class="modal fade"
+      id="viewModal"
+      tabindex="-1"
+      aria-labelledby="viewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="viewModalLabel">Workout Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="view-details">
+            <!-- Dynamic workout details will be inserted here -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and External Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
