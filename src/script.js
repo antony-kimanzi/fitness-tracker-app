@@ -78,7 +78,7 @@ function addWorkoutEntry(workout) {
 
 // Open Modal for Viewing Workout Details
 function openViewModal(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`)
+  fetch(`https://fitness-progress-app.onrender.com/workoutData/${id}`)
     .then((res) => res.json())
     .then((workout) => {
       const modalTitle = document.getElementById("viewModalLabel");
@@ -151,7 +151,7 @@ document.getElementById("workout-form").addEventListener("submit", function (e) 
 
 // Add a new workout function
 function addNewWorkout(workoutData) {
-  fetch("http://localhost:3000/workoutData", {
+  fetch("https://fitness-progress-app.onrender.com/workoutData", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -169,7 +169,7 @@ function addNewWorkout(workoutData) {
 
 // Update workout function
 function updateWorkout(id, workoutData) {
-  fetch(`http://localhost:3000/workoutData/${id}`, {
+  fetch(`https://fitness-progress-app.onrender.com/workoutData/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -194,7 +194,7 @@ function updateWorkout(id, workoutData) {
 
 // Delete Workout Function
 function deleteWorkout(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`, {
+  fetch(`https://fitness-progress-app.onrender.com/workoutData/${id}`, {
     method: "DELETE",
   })
     .then(() => {
@@ -204,7 +204,7 @@ function deleteWorkout(id) {
 
 // Open the modal for updating workout
 function openUpdateModal(id) {
-  fetch(`http://localhost:3000/workoutData/${id}`)
+  fetch(`https://fitness-progress-app.onrender.com/workoutData/${id}`)
     .then((res) => res.json())
     .then((workout) => openModal(true, workout))
     .catch((error) => console.error("Error fetching workout:", error));
@@ -212,7 +212,7 @@ function openUpdateModal(id) {
 
 // Fetch workout data and populate the workout log
 function fetchWorkoutData() {
-  fetch("http://localhost:3000/workoutData")
+  fetch("https://fitness-progress-app.onrender.com/workoutData")
     .then((res) => res.json())
     .then((workouts) => workouts.forEach(addWorkoutEntry));
 }
@@ -221,11 +221,11 @@ function fetchWorkoutData() {
 fetchWorkoutData();
 
 function fetchData() {
-    fetch("http://localhost:3000/bodyMeasurements")
+    fetch("https://fitness-progress-app.onrender.com/bodyMeasurements")
       .then((res) => res.json())
       .then(displayBodyMeasurements);
   
-    fetch("http://localhost:3000/fitnessGoals")
+    fetch("https://fitness-progress-app.onrender.com/fitnessGoals")
       .then((res) => res.json())
       .then(displayFitnessGoals);
   }
@@ -280,7 +280,7 @@ function fetchData() {
       muscle_mass: muscleMass
     };
   
-    fetch(`http://localhost:3000/bodyMeasurements/1`, { // Assuming id=1 for simplicity
+    fetch(`https://fitness-progress-app.onrender.com/bodyMeasurements/1`, { // Assuming id=1 for simplicity
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -309,7 +309,7 @@ function fetchData() {
       progress: progress
     };
   
-    fetch(`http://localhost:3000/fitnessGoals/1`, {
+    fetch(`https://fitness-progress-app.onrender.com/fitnessGoals/1`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
