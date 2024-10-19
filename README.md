@@ -14,6 +14,9 @@ Description: A web application designed to help users track their fitness progre
 ## Live server
 * You can view the web live on [fitness-tracker-app](https://antony-kimanzi.github.io/fitness-progress-app/)
 
+## Link to the Presentation Slideshow
+You can access the slide of the presentation using this link [fitness-tracker-app-google-slideshow](https://docs.google.com/presentation/d/1K44UhKqOJWeV1UnDtUJl-n75F5mTr_QDUITejgVjszU/edit?usp=sharing)
+
 ## Known Bugs
 The application works perfectly well, no bugs.
 
