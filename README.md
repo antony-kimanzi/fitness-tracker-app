@@ -21,7 +21,7 @@ You can access the slide of the presentation using this link [fitness-tracker-ap
 The application works perfectly well, no bugs.
 
 ## Technologies Used
-HTML, CSS , JS, JSON, Google Fonts, GIT
+HTML, CSS , JS, JSON, Google Fonts and Bootstrap.
 
 ## Support and contact details
 email :: antony.wambugu@student.moringaschool.com
