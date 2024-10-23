@@ -1,5 +1,5 @@
-# Portfolio
-#### The app is my Portfolio, 17/09/2024
+# Fitness Tracker App
+#### The app is my Fitness Tracker App, 18/10/2024
 #### **By Antony Wambugu**
 ## Description
 Description: A web application designed to help users track their fitness progress over time.
